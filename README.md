@@ -1,5 +1,19 @@
-# Welcome to GitHub Desktop!
-
-This is your README. READMEs are where you can communicate what your project is and how to use it.
-
-Write your name on line 6, save it, and then head back to GitHub Desktop.
+#include<stdio.h>
+#include<math.h>
+float z(float x,float y)
+{
+    float q = ((7.38906)*(pow(cos(y),3))/log(fobs(x/y)));
+    float w =(sin(pow((x*x*x*x*x)/y+1,1/4))-(1/(pow(x,1/3))));
+    if (q>w) return q;
+    if (w>q) return w;
+}
+int main()
+{
+    for(float x=1;x<=3;x+=1.3)
+{
+    for(float y=2;y<=4;y+=1.5)
+{
+    printf("x=%f y=%f z(x,y)=%f",x,y,z(x,y));
+}
+}
+}
